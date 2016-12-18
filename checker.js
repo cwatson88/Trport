@@ -19,6 +19,10 @@ function returnValue(x){
   }
 }
 
+function getObjectValue(let y){
+  
+}
+
   function kbdCSS() {
 
     if ($('.guardian-info:has(.TPS)').length == 0) {
