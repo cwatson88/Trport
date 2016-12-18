@@ -20,7 +20,7 @@ function returnValue(x){
 }
 
 function getObjectValue(let y){
-  
+   var a = 8;
 }
 
   function kbdCSS() {
