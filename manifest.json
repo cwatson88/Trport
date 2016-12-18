@@ -1,0 +1,32 @@
+{
+    // Required
+    "manifest_version": 2,
+    "name": "Trials LFG Checker",
+    "version": "0.1",
+
+
+    // Recommended
+    "description": "Get stats on players before you add them!",
+    "icons": {
+        "16": "icon.png"
+    },
+
+"browser_action": {
+    "default_icon": "icon.png"
+},
+"web_accessible_resources": [
+  "images/ghost.png"
+],
+"background": {
+    // Recommended
+    "scripts": ["background.js"],
+    "persistent": false
+},
+"content_scripts": [{
+    "matches": [
+        "http://www.destinylfg.com/*"
+    ],
+    "css":["mdl//material.min.css", "style.css"],
+    "js": ["jquery3.min.js","mdl//material.min.js","checker.js"]
+}]
+}

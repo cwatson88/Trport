@@ -1,0 +1,26 @@
+.demo-card-square {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 9999;
+}
+
+
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('chrome-extension://__MSG_@@extension_id__/images/ghost.png') bottom right 15% no-repeat #46B6AC ;
+    background-size: 50%;
+}
+
+.mdl-card__actions.mdl-card--border {
+    background-color: rgba(0, 0, 0, 0.62);
+    color: #f0f0f0;
+}
+.TPS > img {
+    height: 40px;
+}
