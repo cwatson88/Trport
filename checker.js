@@ -19,8 +19,17 @@ function returnValue(x){
   }
 }
 
-function getObjectValue(let y){
-   var a = 8;
+function getObjectValue(ob) {
+  for (let a in ob) {
+    if (ob.hasOwnProperty(a)) {
+      console.log("ob has pro obj." + a + " = " + ob[a]);
+       if(typeof(ob[a]) === 'object' && ob[a] !== null){
+      	console.log('is object');
+        listObj(ob[a]);
+      }
+
+    }
+  }
 }
 
   function kbdCSS() {
