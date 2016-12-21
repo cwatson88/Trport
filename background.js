@@ -6,4 +6,6 @@
 //   });
 // });
 
-chrome.tabs.executeScript(null, {file: "checker.js"});
+chrome.tabs.executeScript(null, {
+  file: "checker.js"
+});

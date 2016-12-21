@@ -1,4 +1,18 @@
+
+
+
 $(document).ready(function() {
+  /*var style = document.createElement('link');
+  style.rel = 'stylesheet';
+  style.type = 'text/css';
+  style.href = chrome.extension.getURL('css/material.css');
+  (document.head||document.documentElement).appendChild(style);*/
+  var style = document.createElement('script');
+  style.type = 'javascript';
+  style.src = chrome.extension.getURL('material.js');
+  (document.head||document.documentElement).appendChild(style);
+
+
 
   addActions(kbdCSS);
   statBox();
@@ -118,7 +132,17 @@ function getObjectValue(ob) {
   }
 
   function statBox(status){
-    var a ='<div class="demo-card-square mdl-card mdl-shadow--2dp"> <div class="mdl-card__title mdl-card--expand"> <h2 class="mdl-card__title-text">Trials Stats</h2> </div> <div class="mdl-card__supporting-text"> Stats here</div> <div class="mdl-card__actions mdl-card--border"><h3>BG Watson</h3> </div> </div>'
+    var a =`<div class="demo-card-square mdl-card mdl-shadow--2dp">
+      <input class="mdl-slider mdl-js-slider" type="range"
+    min="0" max="100" value="0" tabindex="0">
+        <div class="mdl-card__title mdl-card--expand">
+            <h2 class="mdl-card__title-text">Trials Stats</h2>
+        </div>
+        <div class="mdl-card__supporting-text"> Stats here</div>
+        <div class="mdl-card__actions mdl-card--border">
+            <h3>BG Watson</h3> </div>
+    </div>`
     $('body').append(a);
+      componentHandler.upgradeAllRegistered();
   }
 });

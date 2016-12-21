@@ -15,7 +15,8 @@
     "default_icon": "icon.png"
 },
 "web_accessible_resources": [
-  "images/ghost.png"
+  "images/ghost.png",
+  "css/material.css"
 ],
 "background": {
     // Recommended
@@ -26,7 +27,8 @@
     "matches": [
         "http://www.destinylfg.com/*"
     ],
-    "css":["mdl//material.min.css", "style.css"],
-    "js": ["jquery3.min.js","mdl//material.min.js","checker.js"]
+    "css":["css/material.css", "css/style.css"],
+    "js": ["jquery3.min.js","checker.js","material.js"],
+    "run_at" : "document_start"
 }]
 }
